@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<br />
+<br />
+<div class="row-container">
+  <figure class="productoDetail">
+    <img src="{{producto.imagen.url}}" alt="{{producto.nombre}}" />
+    <div class="price">$ {{producto.precio}}</div>
+    <figcaption>
+      <h3>{{producto.nombre}}</h3>
+      <h4>Marca: {{producto.marca}}</h4>
+      <h4>Categoria: {{producto.categoria}}</h4>
+      <p><strong>Descripcion: </strong>{{producto.descripcion}}</p>
+    </figcaption>
+  </figure>
+</div>
+{%endblock%}

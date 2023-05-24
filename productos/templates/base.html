@@ -1,0 +1,76 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!---jquery-->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+
+    <!----boostarp-->
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <script src="{% static 'script.js' %}"></script>
+    <title>Global Paper Machinery</title>
+  </head>
+  <body>
+    <!----nav bar-->
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="/">Global Paper Machinery</a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!"><span></span></a>
+          </div>
+          <ul class="nav-list">
+            <li>
+              <a href="/productos">Todos los productos</a>
+            </li>
+           
+            <li>
+              <a href="#!">Categorias</a>
+              <ul class="nav-dropdown">
+                {%for categoria in categorias%}
+                <li>
+                  <a href="/productos/{{categoria.nombre}}">{{categoria.nombre}}</a>
+                </li>
+                {%endfor%}
+              </ul>
+            </li>
+            <li>
+              <a href="/about">Acerca de</a>
+            </li>
+            
+            <li>
+              <a href="/contacto">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+   
+
+
+
+<div class="content">
+{%block content%}
+
+{%endblock content%}
+  
+</div>
+    
+    <hr />
+    <!--footer-->
+    <footer class="footer">
+      Todos los derechos reservados @copyrigth Kevin Gasga
+    </footer>
+  </body>
+</html>

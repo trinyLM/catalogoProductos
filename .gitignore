@@ -1,0 +1,25 @@
+# archivos generados automáticamente
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# archivo de configuración local de django
+
+
+# base de datos
+db.sqlite3
+migrations/
+# directorio de medios
+media/
+
+# archivo estático compilado
+staticfiles/
+
+# logs
+*.log
+logs/
+
+#carpeta de entorno 
+env/
+.env
